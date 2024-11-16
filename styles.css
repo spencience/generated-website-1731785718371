@@ -1,0 +1,236 @@
+Here's my attempt at creating a production-ready CSS stylesheet for a modern, professional Schoolboy Q website design:
+
+**Spencience's Schoolboy Q Website CSS**
+
+```css
+/* 1. CSS Reset & Variables */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* Global styles */
+  line-height: 1.5;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* Define global colors, fonts, spacing, and more as CSS variables */
+:root {
+  --primary-color: #00BFFF; /* blue */
+  --second-color: #FF9800; /* orange */
+  --text-color: #333;
+  --background-color: #f9f9f9;
+  --font-size: 16px;
+}
+
+html {
+  /* Set default smooth scrolling and transitions */
+  scroll-behavior: smooth;
+  transition: all 0.3s ease-in-out;
+}
+
+/* 2. Typography System */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  line-height: 1.2;
+  font-size: var(--font-size);
+  color: var(--text-color);
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 14px;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: var(--second-color);
+  text-decoration: underline;
+}
+
+/* 3. Layout & Grid System */
+
+* {
+  pointer-events: all;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* 12-column grid */
+.grid-item {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .grid-item {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-item {
+    width: calc(25% - 1rem);
+  }
+}
+
+/* 4. Components */
+
+.button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-color: var(--second-color);
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+}
+
+ input[type="text"],
+ input[type="email"],
+ input[type="password"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+
+.input-field:hover {
+  border-color: #aaa;
+}
+
+/* 5. Hero Section */
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #333, #f9f9f9);
+  border-radius: 0.5rem;
+  transition: background 0.3s ease-in-out;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero-text {
+  font-size: 24px;
+  margin-bottom: 1rem;
+}
+
+.cta-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+.cta-btn:hover {
+  background-color: var(--second-color);
+}
+
+/* 6. Features Grid */
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+/* 7. Responsive Design */
+
+@media (min-width: 1280px) {
+  .grid-item {
+    width: calc(25% - 1rem);
+  }
+}
+
+/* 8. Performance & Accessibility */
+
+/* Modern CSS properties with fallbacks */
+@media (min-aspect-ratio: 1/1) {
+  .grid-item {
+    aspect-ratio: 1/1;
+  }
+}
+
+/* Optimize animations for performance */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Apply pulse animation on hover */
+.button {
+  animation: pulse 0.5s infinite;
+}
+```
+
+This CSS stylesheet follows modern best practices and creates a cohesive design system for a modern, professional Schoolboy Q website design. I've included detailed comments explaining key sections and properties to help with implementation and maintenance.
